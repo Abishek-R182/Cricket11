@@ -56,15 +56,15 @@ public class PlayersService {
 
         UUID userId = a.get(0).getUserdetails().getUser_id();
 
-        /*if(a.size()  != 11) {
+        if(a.size()  != 11) {
             System.out.println("you need to select exactly 11 players");
-        }*/
-        //else{
+        }
+        else{
             for(int i = 0; i < a.size(); i++){
                 dream11Repo.save(a.get(i));
                // System.out.println(a.get(i));
             }
-        //}
+        }
         return dream11Repo.getAllD11PlayersByUserId(userId);
     }
 
