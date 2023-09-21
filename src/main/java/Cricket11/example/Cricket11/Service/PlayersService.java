@@ -73,59 +73,6 @@ public class PlayersService {
 }
 
 
-    /*public void addDream11Player(){
-        if(Dream11Player.size()){
-
-    }
-
-
-}*/
-
-
-      /*  Players player = playersRepo.findById(a.getPlayer_id()).orElse(null);
-
-       Dream11Player dream11Player = new Dream11Player();
-
-          dream11Player.setPlayers(players);
-          dream11Player.setPlayer_name(a.getPlayer_name());
-          dream11Player.setPlayer_country(a.getPlayer_country());
-          dream11Player.setPlayer_batting_Style(a.getBatting_style());
-          dream11Player.setPlayer_bowling_Style(a.getBowling_style());
-          dream11Player.setAge(a.getPlayer_age());*/
-
-       /*public void addDream11Player(){
-        if(dream11player.size() != 11){
-            new exception()
-
-      }
-
-
-        //if(dream11player.size() != 11) {
-
-            // exception
-        //}
-
-       // for() //
-
-            // for each UUID in list, call repo and get player info
-
-            //if(//player exists or not  ) {
-
-                // }
-
-            // Players p = playersRepo.findById(dream11players.get(0));
-
-
-
-                 //Dream11Player d = new Dream11Player();
-
-                    // d.setname(p.getname)
-                     // d.Setbowlingstlye(p.getBowlingStyle)
-
-               // Dream11Repo.save(d);*/
-
-
-
 
 
 
