@@ -13,8 +13,7 @@ public interface PlayersRepo extends JpaRepository<Players, UUID> {
 
 }
 
-    //@Query("update ? 1")
-    //public void updatePlayerByUUID(UUID playerId, String playerName);
+    
 
 
 
