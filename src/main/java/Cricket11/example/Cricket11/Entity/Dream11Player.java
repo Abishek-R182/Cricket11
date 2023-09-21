@@ -8,17 +8,6 @@ import java.util.UUID;
 
 public class Dream11Player {
 
-   /* public Dream11Player(UUID player_id,String player_name, int player_age,  String player_country, String batting_Style, String bowling_Style){
-        this.players = new Players();
-        this.players.setPlayer_id(player_id);
-
-        this.player_name = player_name;
-        this.player_age = player_age;
-        this.player_country = player_country;
-        this.batting_Style = batting_Style;
-        this.bowling_Style = bowling_Style;
-    }*/
-
     @Id
     @GeneratedValue
     private UUID Id;
