@@ -30,8 +30,8 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
+                <li><a href="/getpoints">Page 1</a></li>
+                <li><a href="/updateplayers">Page 2</a></li>
                 <li><a href="#">Page 3</a></li>
             </ul>
         </div>
@@ -41,23 +41,34 @@
 
         <div class="panel-heading">Player Scores</div>
 
-        <table class="table">
+        <table class="table table-bordered">
             <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Salary</th>
+            <tr class="danger">
+                <th>Players Name</th>
+                <th>Runs</th>
+                <th>Wickets</th>
+                <th>Catch</th>
+                <th>Stumping</th>
+                <th>Run Out</th>
+                <th>Total Points</th>
+
             </tr>
             </thead>
             <tbody>
             <tr th:each="playerResult : ${playerResults}">
+                <td th:text="${playerResult.Players.player_name}"></td>
                 <td th:text="${playerResult.Runs}"></td>
                 <td th:text="${playerResult.Wickets}"></td>
+                <td th:text="${playerResult.Catch}"></td>
+                <td th:text="${playerResult.Stumping}"></td>
+                <td th:text="${playerResult.Runout}"></td>
+                <td th:text="${playerResult.Total}"></td>
+
 
             </tr>
             </tbody>
         </table>
+
 
     </div>
 
