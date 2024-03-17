@@ -14,6 +14,6 @@
 
 ----
 >OutPut
-> 
+
 ![Screenshot (115)](https://github.com/Abishek-R182/Cricket11/assets/113702399/a9740bd1-f858-4365-9e66-c1a03b83b1ef)
 - Final Output, Displaying the players points based on their performance of the Match.
