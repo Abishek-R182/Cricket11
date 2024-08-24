@@ -1,6 +1,6 @@
 
 # Use a lightweight base image for the application
-FROM openjdk:20-jdk-slim
+FROM amazoncorretto:21
 
 RUN mkdir app
 # Set the working directory in the container
