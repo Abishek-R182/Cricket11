@@ -4,6 +4,7 @@ import Cricket11.example.Cricket11.Entity.Pointstable;
 import Cricket11.example.Cricket11.Entity.Results;
 import Cricket11.example.Cricket11.Repositry.PointsRepo;
 import Cricket11.example.Cricket11.Repositry.ResultRepo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.util.List;
 import static java.lang.String.valueOf;
 
 @Service
+@Slf4j
 public class ScoreService {
     @Autowired
     ResultRepo resultRepo;
@@ -20,8 +22,9 @@ public class ScoreService {
     @Autowired
     PointsRepo pointsRepo;
         public List<Results> calculateScore(){
+            log.debug("Calculating Score");
             List<Pointstable> p = pointsRepo.findAll();
-
+            log.debug("Points repo data" + p.toString());
             int Runs = 0, Wickets = 0, Catch = 0, Stumping = 0, Runout = 0;
 
             for(int i = 0; i < p.size(); i++) {
@@ -42,7 +45,7 @@ public class ScoreService {
             }
 
             List<Results> results = resultRepo.findAll();
-
+            log.debug("Result Repo data" + results.toString());
 
             for (int j = 0; j < results.size(); j++) {
                 int total = 0;
@@ -59,7 +62,9 @@ public class ScoreService {
 
                 results.get(j).setTotal(String.valueOf(total));
 
+                log.debug("Saving Results");
                 resultRepo.save(results.get(j));
+
             }
             return results;
         }
