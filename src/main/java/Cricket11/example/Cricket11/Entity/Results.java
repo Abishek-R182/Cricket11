@@ -4,28 +4,47 @@ import jakarta.persistence.*;
 
 import java.util.UUID;
 
+/**
+ * 
+ */
 @Entity
 @Table(name="Results")
 public class Results {
     @Id
     @GeneratedValue
     private UUID Result_Id;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name= "Player_Id")
     private Players players;
+
+    @ManyToOne
+    @JoinColumn(name= "user_id")
+    private Userdetails userdetails;
 
     private String Runs;
     private String Wickets;
     private String Catch;
     private String Stumping;
-    private String RunOut;
+
+    private String Runout;
+
+    public Userdetails getUserdetails() {
+        return userdetails;
+    }
+
+    public void setUserdetails(Userdetails userdetails) {
+        this.userdetails = userdetails;
+    }
+
     private String Total;
 
     public UUID getResult_Id() {
+
         return Result_Id;
     }
 
     public void setResult_Id(UUID result_Id) {
+
         Result_Id = result_Id;
     }
 
@@ -54,7 +73,6 @@ public class Results {
     }
 
     public String getCatch() {
-
         return Catch;
     }
 
@@ -71,21 +89,24 @@ public class Results {
         Stumping = stumping;
     }
 
-    public String getRunOut() {
-        return RunOut;
-    }
 
-    public void setRunOut(String runOut) {
-
-        RunOut = runOut;
-    }
 
     public String getTotal() {
         return Total;
     }
 
     public void setTotal(String total) {
-
         Total = total;
+    }
+
+    public String getRunout() {
+        return Runout;
+    }
+
+    public void setRunout(String runout) {
+        Runout = runout;
+
+
+
     }
 }

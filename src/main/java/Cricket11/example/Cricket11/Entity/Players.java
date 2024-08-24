@@ -13,6 +13,7 @@ public class Players {
     @GeneratedValue
     private UUID player_id;
 
+
     public UUID getPlayer_id() {
         return player_id;
     }
@@ -114,6 +115,7 @@ public class Players {
     }
 
     public void setTest_Runs_Scored(String test_Runs_Scored) {
+
         Test_Runs_Scored = test_Runs_Scored;
     }
 
@@ -158,7 +160,7 @@ public class Players {
     }
 
 
-     private String player_name;
+    private String player_name;
 
 
     private String player_DOB;

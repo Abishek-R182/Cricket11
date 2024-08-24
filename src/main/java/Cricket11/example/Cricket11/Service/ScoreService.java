@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import static java.lang.String.valueOf;
+
 @Service
 public class ScoreService {
     @Autowired
@@ -17,15 +19,10 @@ public class ScoreService {
 
     @Autowired
     PointsRepo pointsRepo;
-
-
-
-
-
         public List<Results> calculateScore(){
             List<Pointstable> p = pointsRepo.findAll();
 
-            int Runs = 0, Wickets = 0, Catch = 0, Stumping = 0, RunOut = 0;
+            int Runs = 0, Wickets = 0, Catch = 0, Stumping = 0, Runout = 0;
 
             for(int i = 0; i < p.size(); i++) {
 
@@ -37,8 +34,8 @@ public class ScoreService {
                     Catch = p.get(i).getPoints();
                 } else if (p.get(i).getPoint_Dept().equals("Stumping")) {
                     Stumping = p.get(i).getPoints();
-                } else if (p.get(i).getPoint_Dept().equals("RunOut")) {
-                    RunOut = p.get(i).getPoints();
+                } else if (p.get(i).getPoint_Dept().equals("Runout")) {
+                    Runout = p.get(i).getPoints();
                 }else{
                     System.out.println(" ");
                 }
@@ -46,8 +43,8 @@ public class ScoreService {
 
             List<Results> results = resultRepo.findAll();
 
-            for (int j = 0; j < results.size(); j++) {
 
+            for (int j = 0; j < results.size(); j++) {
                 int total = 0;
 
                 total += Integer.parseInt(results.get(j).getRuns()) * Runs;
@@ -58,12 +55,11 @@ public class ScoreService {
 
                 total += Integer.parseInt(results.get(j).getStumping()) * Stumping;
 
-                total += Integer.parseInt(results.get(j).getRunOut()) * RunOut;
+                total += Integer.parseInt(results.get(j).getRunout()) * Runout;
 
                 results.get(j).setTotal(String.valueOf(total));
 
                 resultRepo.save(results.get(j));
-
             }
             return results;
         }

@@ -22,7 +22,7 @@ public class Dream11Controller {
 
     //Post APi
     @PostMapping("/postdream11")
-   public Dream11Player postPlayers(@RequestBody Dream11Player s){
+    public Dream11Player postPlayers(@RequestBody Dream11Player s){
        Dream11Player dream11= playersService.entryPlayer(s);
        return dream11;
    }

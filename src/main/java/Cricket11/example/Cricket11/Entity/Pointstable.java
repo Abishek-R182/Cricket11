@@ -14,8 +14,12 @@ public class Pointstable {
     private String Point_Dept;
     private int Points;
 
-    public UUID getPoint_id() {
-        return Point_id;
+
+
+
+
+    public UUID getPoint_id(){
+    return Point_id;
     }
 
     public void setPoint_id(UUID point_id) {
