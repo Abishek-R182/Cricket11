@@ -18,7 +18,7 @@ services:
     environment:
       POSTGRES_PASSWORD: abishek182
     ports:
-        - "5432:5432"
+        - 5432:5432
 
  # cricket11App:
 #  image: cricket11
