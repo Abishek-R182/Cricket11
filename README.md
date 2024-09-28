@@ -5,6 +5,9 @@
 
 ----
 > Docker
+<p>To run app using docker compose </p>
+<a href='https://github.com/Abishek-R182/Cricket11/blob/master/src/main/resources/docker-compose.yml'></a>
+
 
 ![Screenshot (114)](https://github.com/Abishek-R182/Cricket11/assets/113702399/5dc9539a-2939-4b47-a87f-cbc91a0d1749)
 - If you come from the root directory (Cricket11), there is a file called Dockerfile where we have already set up the correct Docker image creation process for the project and as well as for the database.
