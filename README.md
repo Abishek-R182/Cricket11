@@ -1,4 +1,26 @@
 # Cricket11
+
+## Introduction
+Fantasy Cricket League is a web application built using Spring MVC, Docker, and PostgreSQL. It offers users the opportunity to create their own virtual cricket teams, composed of real-world players. The performance of these players in actual matches determines the points earned by the user's team.
+
+## Technology Used
+ - Java: The core programming language used for backend development.
+ - Spring Boot: The framework used to build the application, providing dependency injection, MVC architecture, and more.
+ - PostgreSQL: The relational database management system used for data storage.
+ - Maven: The build tool used for managing project dependencies and packaging.
+ - Git: Version control system for collaborative development.
+ - Docker: Containerization platform to create, deploy, and run applications in containers.
+ - Docker Compose: A tool for defining and running multi-container Docker applications.
+
+## Setup and Installation
+1. **Clone the Repository:**
+   ```
+   git clone https://github.com/Abishek-R182/Cricket11.git
+   cd Cricket11
+
+   ```
+   
+
 > Postgres Database table setup for my Project 
 
 ![Screenshot (112)](https://github.com/Abishek-R182/Cricket11/assets/113702399/30ed00ec-5cbf-4908-9504-482785d3d740)
