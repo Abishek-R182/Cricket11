@@ -19,14 +19,34 @@ Fantasy Cricket League is a web application built using Spring MVC, Docker, and 
    cd Cricket11
 
    ```
-2. **Navigate to the Docker Compose:** To run the app using Docker Compose, refer to the Docker Compose file
+2. **Build and Run the Application:**
+   ```
+   mvn spring-boot:run
+   ```
+
+3. **Access the Application:**
+   The application will be accessible at `http://localhost:8080`.
+   
+
+
+## Running with Docker Compose
+
+To run the application using Docker Compose, follow these steps:
+
+1. **Install Docker and Docker Compose:**
+   Make sure you have Docker and Docker Compose installed on your machine. For instructions, visit the official Docker website: [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/).
+   
+3. **Navigate to the Docker Compose:** To run the app using Docker Compose, refer to the Docker Compose file
    <a href="https://github.com/Abishek-R182/Cricket11/blob/master/src/main/resources/docker-compose.yml">Docker Compose File</a>
 
-3. **Run the application:** Execute the following command in your terminal:
-   ```bash
-   docker-compose up -d
-   
-4. **Access the Application:** The application will be accessible at your public IP Address. like 00.00.000.000/getresult
+4. **Build and Run Docker Containers:**
+   ```
+   docker-compose up
+   ```
+   This will build and run the Docker containers defined in the `compose.yml` file. It includes the Spring Boot application and a PostgreSQL database container.
+
+5. **Access the Application:** The application will be accessible at your public IP Address. like 00.00.000.000/getresult
+
 
 ## Postgres Database Setup
 
