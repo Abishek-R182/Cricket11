@@ -19,9 +19,8 @@ Fantasy Cricket League is a web application built using Spring MVC, Docker, and 
    cd Cricket11
 
    ```
-2. **Navigate to the project directory:**
-   Open a terminal window and navigate to the directory containing your `docker-compose.yml` file.
-   Cricket11 -> src -> main ->  resources 
+2. **Navigate to the Docker Compose:** To run the app using Docker Compose, refer to the Docker Compose file
+   <a href="https://github.com/Abishek-R182/Cricket11/blob/master/src/main/resources/docker-compose.yml">Docker Compose File</a>
 
 3. **Run the application:** Execute the following command in your terminal:
    ```bash
