@@ -47,6 +47,7 @@ public class ScoreController {
 
         List<Results> playerResults = scoreService.calculateScore();
         model.addAttribute("playerResults",playerResults);
+	model.addAttribute("containerId",InetAddress.getLocalHost().getHostName());
 
         log.info("Client Host Address: {}", InetAddress.getLocalHost().getHostName());
 

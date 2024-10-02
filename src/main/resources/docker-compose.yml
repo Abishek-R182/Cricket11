@@ -2,30 +2,33 @@ version: '3.9'
 
 services:
 
-  db:
+  postgres-db:
     image: postgres
     restart: always
     container_name: postgres-db
 
     # set shared memory limit when using docker-compose
-    shm_size: 128mb
+    #shm_size: 128mb
     # or set shared memory limit when deploy via swarm stack
     volumes:
-      - type: tmpfs
-        target: /data/cricket11
+      - ~/data/postgres:/var/lib/postgresql/data      
+      #- type: tmpfs
+      #  target: /data/cricket11
         #tmpfs:
     #      size: 134217728 # 128*2^20 bytes = 128Mb
     environment:
       POSTGRES_PASSWORD: abishek182
     ports:
       - 5432:5432
+    networks:
+      - app-network
 
 
   cricket11App:
     image: cricket11
     restart: always
     ports:
-      - "8080"
+      - 8080
     deploy:
       replicas: 2
 
@@ -35,7 +38,7 @@ services:
   nginx:
     image: nginx:alpine
     ports:
-      - "80:80"
+      - 80:80
     depends_on:
       - cricket11App
     volumes:
