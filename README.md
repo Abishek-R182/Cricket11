@@ -33,6 +33,22 @@ Fantasy Cricket League is a web application built using Spring MVC, Docker, and 
 
 ![Screenshot (112)](https://github.com/Abishek-R182/Cricket11/assets/113702399/30ed00ec-5cbf-4908-9504-482785d3d740)
 
+1. **Locate the SQL File:** The database schema and initial data are provided in the resources folder of the project.
+
+   'Cricket11/src/main/resources/'
+
+2. **Create the Database:**
+Before running the application, ensure that PostgreSQL is installed and running on your system. You can create the database by executing the .sql file.
+
+3. **Executing the SQL File:**
+   ```bash
+   psql -U <postgres> -d <postgres> -f Cricket11/src/main/resources/data-dream11.sql
+   psql -U <postgres> -d <postgres> -f Cricket11/src/main/resources/data-players.sql
+   psql -U <postgres> -d <postgres> -f Cricket11/src/main/resources/data-points.sql
+   psql -U <postgres> -d <postgres> -f Cricket11/src/main/resources/data-result.sql
+   psql -U <postgres> -d <postgres> -f Cricket11/src/main/resources/data-userdetails.sql
+    ```  
+
 ## Running with Docker Compose
 
 To run the application using Docker Compose, follow these steps:
