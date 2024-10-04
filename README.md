@@ -69,7 +69,7 @@ To run the application using Docker Compose, follow these steps:
 5. **Access the Application:** The application will be accessible at your public IP Address. like 00.00.000.000/getresult
 
 
-## Docker Image
+## Docker Image Conversion
 
 1. **Navigate to the Project Directory:** Go to the directory where the Dockerfile is located
    ``` bash
