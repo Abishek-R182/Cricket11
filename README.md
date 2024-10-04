@@ -34,9 +34,9 @@ Fantasy Cricket League is a web application built using Spring MVC, Docker, and 
 ![Screenshot (112)](https://github.com/Abishek-R182/Cricket11/assets/113702399/30ed00ec-5cbf-4908-9504-482785d3d740)
 
 1. **Locate the SQL File:** The database schema and initial data are provided in the resources folder of the project.
-
-   'Cricket11/src/main/resources/'
-
+  ```bash
+  cd Cricket11/src/main/resources/
+```
 2. **Create the Database:**
 Before running the application, ensure that PostgreSQL is installed and running on your system. You can create the database by executing the .sql file.
 
@@ -47,7 +47,8 @@ Before running the application, ensure that PostgreSQL is installed and running 
    psql -U <postgres> -d <postgres> -f Cricket11/src/main/resources/data-points.sql
    psql -U <postgres> -d <postgres> -f Cricket11/src/main/resources/data-result.sql
    psql -U <postgres> -d <postgres> -f Cricket11/src/main/resources/data-userdetails.sql
-    ```  
+    ```
+
 
 ## Running with Docker Compose
 
@@ -66,6 +67,33 @@ To run the application using Docker Compose, follow these steps:
    This will build and run the Docker containers defined in the `compose.yml` file. It includes the Spring Boot application and a PostgreSQL database container.
 
 5. **Access the Application:** The application will be accessible at your public IP Address. like 00.00.000.000/getresult
+
+
+## Docker Image
+
+1. **Navigate to the Project Directory:** Go to the directory where the Dockerfile is located
+   ``` bash
+    cd Cricket11
+   ```
+2. **Build the Docker Image:** Build the Docker image using the following command.
+   ```bash
+   docker build -t cricket11:latest -f Dockerfile .
+   ```
+   This command creates a Docker image with the name cricket11 using the Dockerfile located in the Cricket11 directory.
+
+3. **Run the Docker Container:** After the image is built, run the container
+   ```bash
+   docker run -d -p 8080:8080 cricket11:latest
+   ```
+   This command runs the container in detached mode (-d) and maps port 8080 of the container to port 8080 on your local machine.
+   
+5. **Access the Application:** Once the container is running, you can access the application by opening your browser.
+   ```bash
+   http://localhost:8080
+   ```
+
+
+   
 
 
 ## Result
